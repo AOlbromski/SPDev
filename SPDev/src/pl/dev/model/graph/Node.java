@@ -12,6 +12,10 @@ public class Node {
 		
 	}
 	
+	public Node(String name){
+		this.name = name;
+	}
+	
 	public Node(String name, List<Route> routes) {
 		super();
 		this.name = name;
