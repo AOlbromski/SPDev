@@ -6,9 +6,17 @@ import java.util.List;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
+
+/**
+ * Represents collection of all Paths from XML file.
+ */
 @XmlRootElement
 public class Paths implements Serializable{
 
+	
+	/**
+	 * Contains all paths from XML file.
+	 */
 	List<Path> paths = new ArrayList<Path>();
 	
 	public Paths(){

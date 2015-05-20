@@ -12,24 +12,45 @@ import pl.dev.model.xml.Paths;
 
 public class GraphFactory {
 
-	public static Graph buildGraph(Paths paths){
+	/**
+	 * This is a static factory method that creates weighted graph from imported XML data.
+	 * <p>
+	 * 
+	 * @param  paths list of paths from XML file
+	 * @return Graph the weighted graph
+	 */
+	public static Graph buildGraph(Paths paths) {
+
 		Graph graph = new Graph();
 		String first = paths.getPaths().get(0).getStartPoint().getName();
-		Map<String,Node> nodesTemp = new HashMap<String,Node>(); 
-		for(Path path : paths.getPaths()){
-			if(!nodesTemp.containsKey(path.getStartPoint().getName())){
-				nodesTemp.put(path.getStartPoint().getName(), new Node(path.getStartPoint().getName()) );
+		Map<String, Node> nodesTemp = new HashMap<String, Node>();
+
+		for (Path path : paths.getPaths()) {
+
+			if (!nodesTemp.containsKey(path.getStartPoint().getName())) {
+				nodesTemp.put(path.getStartPoint().getName(), new Node(path
+						.getStartPoint().getName()));
 			}
-			if(!nodesTemp.containsKey(path.getEndPoint().getName())){
-				nodesTemp.put(path.getEndPoint().getName(), new Node(path.getEndPoint().getName()) );
+
+			if (!nodesTemp.containsKey(path.getEndPoint().getName())) {
+				nodesTemp.put(path.getEndPoint().getName(), new Node(path
+						.getEndPoint().getName()));
 			}
-			nodesTemp.get(path.getStartPoint().getName()).addRoute(new Route(nodesTemp.get(path.getEndPoint().getName()),path.getLength()));
-			nodesTemp.get(path.getEndPoint().getName()).addRoute(new Route(nodesTemp.get(path.getStartPoint().getName()),path.getLength()));
+
+			nodesTemp.get(path.getStartPoint().getName()).addRoute(
+					new Route(nodesTemp.get(path.getEndPoint().getName()), path
+							.getLength()));
+			nodesTemp.get(path.getEndPoint().getName()).addRoute(
+					new Route(nodesTemp.get(path.getStartPoint().getName()),
+							path.getLength()));
 		}
+
 		graph.setFirst(nodesTemp.get(first));
-		for(Entry<String,Node> e : nodesTemp.entrySet()){
+
+		for (Entry<String, Node> e : nodesTemp.entrySet()) {
 			graph.addNode(e.getValue());
 		}
+
 		return graph;
 	}
 }

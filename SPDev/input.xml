@@ -13,7 +13,7 @@
         <endPoint>
             <name>Rome</name>
         </endPoint>
-        <length>2</length>
+        <length>7</length>
         <startPoint>
             <name>London</name>
         </startPoint>
@@ -22,7 +22,7 @@
         <endPoint>
             <name>Warsaw</name>
         </endPoint>
-        <length>3</length>
+        <length>1</length>
         <startPoint>
             <name>London</name>
         </startPoint>
@@ -31,7 +31,7 @@
         <endPoint>
             <name>Rome</name>
         </endPoint>
-        <length>4</length>
+        <length>5</length>
         <startPoint>
             <name>Paris</name>
         </startPoint>
@@ -40,7 +40,61 @@
         <endPoint>
             <name>Warsaw</name>
         </endPoint>
-        <length>5</length>
+        <length>12</length>
+        <startPoint>
+            <name>Paris</name>
+        </startPoint>
+    </paths>
+    <paths>
+        <endPoint>
+            <name>Warsaw</name>
+        </endPoint>
+        <length>19</length>
+        <startPoint>
+            <name>New_York</name>
+        </startPoint>
+    </paths>
+    <paths>
+        <endPoint>
+            <name>Rome</name>
+        </endPoint>
+        <length>8</length>
+        <startPoint>
+            <name>New_York</name>
+        </startPoint>
+    </paths>
+    <paths>
+        <endPoint>
+            <name>Rome</name>
+        </endPoint>
+        <length>14</length>
+        <startPoint>
+            <name>Sydney</name>
+        </startPoint>
+    </paths>
+    <paths>
+        <endPoint>
+            <name>London</name>
+        </endPoint>
+        <length>2</length>
+        <startPoint>
+            <name>Sydney</name>
+        </startPoint>
+    </paths>
+    <paths>
+        <endPoint>
+            <name>Warsaw</name>
+        </endPoint>
+        <length>13</length>
+        <startPoint>
+            <name>Rome</name>
+        </startPoint>
+    </paths>
+    <paths>
+        <endPoint>
+            <name>Sydney</name>
+        </endPoint>
+        <length>10</length>
         <startPoint>
             <name>Paris</name>
         </startPoint>

@@ -3,9 +3,18 @@ package pl.dev.model.graph;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Represents single node in graph.
+ */
 public class Node {
 
+	/**
+	 * Identificates a node, for example "London".
+	 */
 	private String name;
+	/**
+	 * List of connections from this node.
+	 */
 	private List<Route> routes = new ArrayList<Route>();
 	
 	public Node(){

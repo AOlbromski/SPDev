@@ -3,9 +3,20 @@ package pl.dev.model.graph;
 import java.util.ArrayList;
 import java.util.List;
 
+
+/**
+ * Represents weighted graph.
+ * <p>
+ */
 public class Graph {
 	
+	/**
+	 * List of nodes in graph.
+	 */
 	private List<Node> nodes = new ArrayList<Node>();
+	/**
+	 * First node in graph, algorith start from this node to find Hamiltonian cycles.
+	 */
 	private Node first;
 
 	public List<Node> getNodes() {

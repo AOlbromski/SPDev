@@ -1,8 +1,16 @@
 package pl.dev.model.graph;
-
+/**
+ * Represents single path in graph.
+ */
 public class Route {
 
+	/**
+	 * Node that given path lead to.
+	 */
 	private Node endPoint;
+	/**
+	 * Numeric value that defines cost of this path.
+	 */
 	private Integer weight;
 	
 	public Route(){
